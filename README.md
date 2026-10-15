@@ -64,22 +64,24 @@ docker run --rm -it --runtime=runsc ghcr.io/run-agent-red/agent-red:latest -- -h
 
 ## Releasing (maintainers)
 
-On each hosted-agent release, the **extension** repo's `images` CI:
+`nix/hosted-agent.json` is **auto-maintained** — don't edit it by hand. On every
+push to the **extension** repo's `main`, its `images` CI:
 
-1. builds the agent and pushes its closure to the `agent-red` Cachix cache
-   (Linux arches on the `build` job, macOS arches on the `agent-darwin` job), and
-2. prints each store path ("hosted-agent pin → …"), keyed by Nix system.
+1. builds + pushes the agent closure to the `agent-red` Cachix cache (Linux
+   arches on the `build` job, Apple-Silicon macOS on the `agent-darwin` job), and
+2. the `update-pins` job writes each store path into this repo's
+   `nix/hosted-agent.json` and commits — but only when a pin actually changed.
 
-Copy those into `nix/hosted-agent.json` here (replacing the `0000…`
-placeholders), keep `cache` as `https://agent-red.cachix.org`, and commit. Take
-each path from the run that **actually pushed** to Cachix — store paths change
-whenever nixpkgs or the source moves, so a path from a non-pushing run will 404.
-Confirm one is live before committing:
+Because the extension's `combinedSrc` is filtered to just the Go build inputs,
+the pins only move when the agent genuinely changes (Go code, deps, or a nixpkgs
+bump), not on unrelated commits.
 
-```bash
-h=$(basename <store-path> | cut -d- -f1)
-curl -s -o /dev/null -w "%{http_code}\n" "https://agent-red.cachix.org/$h.narinfo"  # 200 = present
-```
+One-time setup this automation depends on:
 
-Set the real Cachix public key in `flake.nix`'s
-`nixConfig.extra-trusted-public-keys` once (it does not change between releases).
+- **`INSTALL_REPO_PAT`** secret on the extension repo: a token with
+  `contents:write` on `run-agent-red/agent-red-install` (so CI can commit here).
+- The Cachix cache's **"upstream caches" setting is off**, so the full closure
+  (incl. `tzdata`/`iana-etc`/`mailcap`) is published — otherwise `fetchClosure`
+  can't assemble it.
+- The real Cachix public key is set once in `flake.nix`'s
+  `nixConfig.extra-trusted-public-keys` (it does not change between releases).
