@@ -1,6 +1,7 @@
 {
-  "_comment": "Pin for the public hosted-agent install: the prebuilt gateway agent the extension release CI pushed to Cachix. Per-arch store paths + the public cache they are fetched (and signature-verified) from. Refresh these from the extension CI's printed pin on each release; placeholders below do not resolve until then.",
+  "_comment": "Pin for the public hosted-agent install: the prebuilt bare agent the extension release CI pushed to Cachix, per Nix system. Linux runs the full deploy; Apple-Silicon macOS is the bare agent (the Linux-only toolkit is Docker/Linux only). Intel macOS and Windows use Docker (Windows can also use WSL2, which is the Linux path). No x86_64-darwin: nixpkgs 26.11 dropped Intel-mac support. Refresh each path from the extension CI's printed pin on the run that actually pushed; the darwin placeholder does not resolve until the mac CI job has run.",
   "cache": "https://agent-red.cachix.org",
-  "x86_64-linux": "/nix/store/1hz87wnjwfqwdz7vhb33m3bjfyw420xy-agent-red-extension-dev",
-  "aarch64-linux": "/nix/store/g23fppd4gw5r8xwdqv10l2rjhq1x346g-agent-red-extension-dev"
+  "x86_64-linux": "/nix/store/bvln37fr4c6zckb6b22zq8qa7w2lmyim-agent-red-extension-dev",
+  "aarch64-linux": "/nix/store/p6rszqsjv98ndapa83riipf0h29cmg54-agent-red-extension-dev",
+  "aarch64-darwin": "/nix/store/a3f5bf7xzkxyir1rycrhvpdh3wxf9bfw-agent-red-extension-dev"
 }
