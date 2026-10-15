@@ -13,6 +13,11 @@
     extra-trusted-public-keys = [
       "agent-red.cachix.org-1:9A0eteN1sI4xoAyvCcWqdR9rBPtc0r6GFgp1rC1TInc="
     ];
+    # NOTE: the hosted-agent output uses builtins.fetchClosure, gated behind the
+    # `fetch-closure` experimental feature. That is an EVAL-time builtin, so it
+    # cannot be enabled from here (nixConfig is applied too late). The caller must
+    # enable it, e.g. `--extra-experimental-features 'nix-command flakes
+    # fetch-closure'` or in nix.conf. The web-app deploy recipe passes it.
   };
 
   outputs = { self, nixpkgs }:
@@ -31,7 +36,7 @@
           hosted-agent = pkgs.symlinkJoin {
             name = "hosted-agent";
             paths = [
-              (pkgs.fetchClosure {
+              (builtins.fetchClosure {
                 fromStore = pin.cache;
                 fromPath = pin.${system};
                 inputAddressed = true;
