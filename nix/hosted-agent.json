@@ -1,0 +1,6 @@
+{
+  "_comment": "Pin for the public hosted-agent install: the prebuilt gateway agent the extension release CI pushed to Cachix. Per-arch store paths + the public cache they are fetched (and signature-verified) from. Refresh these from the extension CI's printed pin on each release; placeholders below do not resolve until then.",
+  "cache": "https://agent-red.cachix.org",
+  "x86_64-linux": "/nix/store/0000000000000000000000000000000000000000-agent-red-extension-dev",
+  "aarch64-linux": "/nix/store/0000000000000000000000000000000000000000-agent-red-extension-dev"
+}
