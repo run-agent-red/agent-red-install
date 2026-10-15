@@ -11,7 +11,7 @@
   nixConfig = {
     extra-substituters = [ "https://agent-red.cachix.org" ];
     extra-trusted-public-keys = [
-      "agent-red.cachix.org-1:REPLACE_WITH_CACHIX_PUBLIC_KEY"
+      "agent-red.cachix.org-1:9A0eteN1sI4xoAyvCcWqdR9rBPtc0r6GFgp1rC1TInc="
     ];
   };
 
