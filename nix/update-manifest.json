@@ -1,0 +1,10 @@
+{
+  "version": "v0.1.0",
+  "sequence": 1000,
+  "cache": "https://agent-red.cachix.org",
+  "storePaths": {
+    "aarch64-darwin": "/nix/store/mds5i2szv0blhyfqm3v0kqq8qjbzy035-agent-red-extension-v0.1.0",
+    "aarch64-linux": "/nix/store/i6gvy9yx4plnifgg5bpjmvv36x4si237-agent-red-extension-v0.1.0",
+    "x86_64-linux": "/nix/store/nh6yikmsz8zi2idp8crfc2cndzpnbvad-agent-red-extension-v0.1.0"
+  }
+}
