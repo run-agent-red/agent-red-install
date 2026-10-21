@@ -1,10 +1,371 @@
 {
-  "version": "v0.1.0",
-  "sequence": 1000,
+  "version": "v0.1.2",
+  "sequence": 1002,
   "cache": "https://agent-red.cachix.org",
   "storePaths": {
-    "aarch64-darwin": "/nix/store/mds5i2szv0blhyfqm3v0kqq8qjbzy035-agent-red-extension-v0.1.0",
-    "aarch64-linux": "/nix/store/i6gvy9yx4plnifgg5bpjmvv36x4si237-agent-red-extension-v0.1.0",
-    "x86_64-linux": "/nix/store/nh6yikmsz8zi2idp8crfc2cndzpnbvad-agent-red-extension-v0.1.0"
+    "aarch64-darwin": "/nix/store/sd33d6ly309r2vyhf92kqvp5hr78il3a-agent-red-extension-v0.1.2",
+    "aarch64-linux": "/nix/store/r20xrf24d6drz3j6mwqbgghn3li1wjbk-agent-red-extension-v0.1.2",
+    "x86_64-linux": "/nix/store/nl870c0fg2v9wyvmsgwb79i22zyi64p3-agent-red-extension-v0.1.2"
+  },
+  "toolkit": {
+    "nixpkgsRev": "7fd4004d0511991fff3a0524856a9be09e28c5f0",
+    "catalog": [
+      {
+        "command": "nmap",
+        "description": "Free and open source utility for network discovery and security auditing",
+        "keywords": [
+          "port scan",
+          "service detection",
+          "host discovery",
+          "network enumeration",
+          "os detection"
+        ],
+        "nixAttr": "nmap"
+      },
+      {
+        "command": "masscan",
+        "description": "Fast scan of the Internet",
+        "keywords": [
+          "port scan",
+          "mass scan",
+          "internet-wide scan"
+        ],
+        "nixAttr": "masscan"
+      },
+      {
+        "command": "naabu",
+        "description": "Fast SYN/CONNECT port scanner",
+        "keywords": [
+          "port scan",
+          "host discovery",
+          "projectdiscovery"
+        ],
+        "nixAttr": "naabu"
+      },
+      {
+        "command": "ffuf",
+        "description": "Tool for web fuzzing",
+        "keywords": [
+          "web fuzzing",
+          "content discovery",
+          "directory brute force",
+          "parameter fuzzing",
+          "virtual host discovery"
+        ],
+        "nixAttr": "ffuf"
+      },
+      {
+        "command": "feroxbuster",
+        "description": "Recursive content discovery tool",
+        "keywords": [
+          "content discovery",
+          "directory brute force",
+          "forced browsing"
+        ],
+        "nixAttr": "feroxbuster"
+      },
+      {
+        "command": "dirsearch",
+        "description": "Command-line tool for brute-forcing directories and files in webservers, AKA a web path scanner",
+        "keywords": [
+          "content discovery",
+          "directory brute force"
+        ],
+        "nixAttr": "dirsearch"
+      },
+      {
+        "command": "nikto",
+        "description": "Web server scanner",
+        "keywords": [
+          "web vulnerability scanner",
+          "server misconfiguration"
+        ],
+        "nixAttr": "nikto"
+      },
+      {
+        "command": "nuclei",
+        "description": "Tool for configurable targeted scanning",
+        "keywords": [
+          "vulnerability scanner",
+          "templates",
+          "cve scanning",
+          "projectdiscovery"
+        ],
+        "nixAttr": "nuclei"
+      },
+      {
+        "command": "sqlmap",
+        "description": "Automatic SQL injection and database takeover tool",
+        "keywords": [
+          "sql injection",
+          "sqli",
+          "database"
+        ],
+        "nixAttr": "sqlmap"
+      },
+      {
+        "command": "ghauri",
+        "description": "Tool for detecting and exploiting SQL injection security flaws",
+        "keywords": [
+          "sql injection",
+          "sqli"
+        ],
+        "nixAttr": "ghauri"
+      },
+      {
+        "command": "dalfox",
+        "description": "Tool for analyzing parameter and XSS scanning",
+        "keywords": [
+          "xss",
+          "cross site scripting",
+          "parameter analysis"
+        ],
+        "nixAttr": "dalfox"
+      },
+      {
+        "command": "xsstrike",
+        "description": "Advanced XSS scanner",
+        "keywords": [
+          "xss",
+          "cross site scripting"
+        ],
+        "nixAttr": "xsstrike"
+      },
+      {
+        "command": "commix",
+        "description": "Automated Command Injection Exploitation Tool",
+        "keywords": [
+          "command injection",
+          "rce",
+          "os command injection"
+        ],
+        "nixAttr": "commix"
+      },
+      {
+        "command": "arjun",
+        "description": "HTTP parameter discovery suite",
+        "keywords": [
+          "parameter discovery",
+          "hidden parameters"
+        ],
+        "nixAttr": "arjun"
+      },
+      {
+        "command": "subfinder",
+        "description": "Subdomain discovery tool",
+        "keywords": [
+          "subdomain enumeration",
+          "recon",
+          "osint",
+          "projectdiscovery"
+        ],
+        "nixAttr": "subfinder"
+      },
+      {
+        "command": "amass",
+        "description": "In-Depth DNS Enumeration and Network Mapping",
+        "keywords": [
+          "subdomain enumeration",
+          "attack surface",
+          "osint",
+          "asset discovery"
+        ],
+        "nixAttr": "amass"
+      },
+      {
+        "command": "shuffledns",
+        "description": "massDNS wrapper to bruteforce and resolve the subdomains with wildcard handling support",
+        "keywords": [
+          "subdomain brute force",
+          "dns resolution"
+        ],
+        "nixAttr": "shuffledns"
+      },
+      {
+        "command": "dnsx",
+        "description": "Fast and multi-purpose DNS toolkit",
+        "keywords": [
+          "dns resolution",
+          "dns enumeration",
+          "projectdiscovery"
+        ],
+        "nixAttr": "dnsx"
+      },
+      {
+        "command": "httpx",
+        "description": "Fast and multi-purpose HTTP toolkit",
+        "keywords": [
+          "http probing",
+          "web recon",
+          "technology detection",
+          "projectdiscovery"
+        ],
+        "nixAttr": "httpx"
+      },
+      {
+        "command": "katana",
+        "description": "Next-generation crawling and spidering framework",
+        "keywords": [
+          "web crawler",
+          "spider",
+          "url discovery",
+          "projectdiscovery"
+        ],
+        "nixAttr": "katana"
+      },
+      {
+        "command": "gau",
+        "description": "Tool to fetch known URLs",
+        "keywords": [
+          "url discovery",
+          "recon",
+          "wayback",
+          "getallurls"
+        ],
+        "nixAttr": "gau"
+      },
+      {
+        "command": "waybackurls",
+        "description": "Tool to fetch all the URLs that the Wayback Machine knows about for a domain",
+        "keywords": [
+          "url discovery",
+          "wayback",
+          "recon"
+        ],
+        "nixAttr": "waybackurls"
+      },
+      {
+        "command": "hydra",
+        "description": "Very fast network logon cracker which support many different services",
+        "keywords": [
+          "password brute force",
+          "login cracking",
+          "credential attack"
+        ],
+        "nixAttr": "thc-hydra"
+      },
+      {
+        "command": "hashcat",
+        "description": "Fast password cracker",
+        "keywords": [
+          "password cracking",
+          "hash cracking"
+        ],
+        "nixAttr": "hashcat"
+      },
+      {
+        "command": "john",
+        "description": "John the Ripper password cracker",
+        "keywords": [
+          "password cracking",
+          "hash cracking"
+        ],
+        "nixAttr": "john"
+      },
+      {
+        "command": "msfconsole",
+        "description": "Metasploit Framework - a collection of exploits",
+        "keywords": [
+          "exploit framework",
+          "metasploit",
+          "payloads",
+          "post exploitation"
+        ],
+        "nixAttr": "metasploit"
+      },
+      {
+        "command": "trufflehog",
+        "description": "Find credentials all over the place",
+        "keywords": [
+          "secret scanning",
+          "credential leak",
+          "secrets"
+        ],
+        "nixAttr": "trufflehog"
+      },
+      {
+        "command": "gitleaks",
+        "description": "Scan git repos (or files) for secrets",
+        "keywords": [
+          "secret scanning",
+          "git secrets"
+        ],
+        "nixAttr": "gitleaks"
+      },
+      {
+        "command": "testssl.sh",
+        "description": "CLI tool to check a server's TLS/SSL capabilities",
+        "keywords": [
+          "tls",
+          "ssl",
+          "cipher testing",
+          "certificate"
+        ],
+        "nixAttr": "testssl"
+      },
+      {
+        "command": "jwt_tool",
+        "description": "Toolkit for testing, tweaking and cracking JSON Web Tokens",
+        "keywords": [
+          "jwt",
+          "json web token",
+          "token attack"
+        ],
+        "nixAttr": "jwt-tool"
+      },
+      {
+        "command": "clairvoyance",
+        "description": "Tool to obtain GraphQL API schemas",
+        "keywords": [
+          "graphql",
+          "schema recovery",
+          "introspection"
+        ],
+        "nixAttr": "clairvoyance"
+      },
+      {
+        "command": "seclists",
+        "description": "Collection of multiple types of lists used during security assessments, collected in one place",
+        "keywords": [
+          "wordlists",
+          "fuzzing lists",
+          "payloads",
+          "usernames",
+          "passwords"
+        ],
+        "nixAttr": "seclists"
+      },
+      {
+        "command": "bettercap",
+        "description": "Man in the middle tool",
+        "keywords": [
+          "mitm",
+          "arp spoofing",
+          "network attack",
+          "sniffing"
+        ],
+        "nixAttr": "bettercap"
+      },
+      {
+        "command": "tcpdump",
+        "description": "Network sniffer",
+        "keywords": [
+          "packet capture",
+          "sniffing",
+          "network analysis"
+        ],
+        "nixAttr": "tcpdump"
+      },
+      {
+        "command": "mitmproxy",
+        "description": "Man-in-the-middle proxy",
+        "keywords": [
+          "intercepting proxy",
+          "mitm",
+          "http inspection"
+        ],
+        "nixAttr": "mitmproxy"
+      }
+    ]
   }
 }
