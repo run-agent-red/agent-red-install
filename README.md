@@ -1,4 +1,21 @@
+<p align="center">
+  <a href="https://www.agent-red.si">
+    <img src="assets/banner.png" alt="agent red" width="100%">
+  </a>
+</p>
+
 # agent-red-install
+
+## What is agent red?
+
+[agent red](https://www.agent-red.si) is an offensive-security platform. You
+deploy autonomous operators into your own infrastructure and run operations
+against targets you own, with an approval gate keeping a human in control.
+Deploy agents, manage the fleet, and review findings from the hosted console at
+[app.agent-red.si](https://app.agent-red.si). Learn more at
+**[www.agent-red.si](https://www.agent-red.si)**.
+
+## About this repo
 
 A tiny **public** installer for the hosted agent-red. It contains no agent source
 — just a flake that fetches the already-built, **signature-verified** agent
@@ -85,3 +102,7 @@ One-time setup this automation depends on:
   can't assemble it.
 - The real Cachix public key is set once in `flake.nix`'s
   `nixConfig.extra-trusted-public-keys` (it does not change between releases).
+
+---
+
+[www.agent-red.si](https://www.agent-red.si)
