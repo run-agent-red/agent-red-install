@@ -1,11 +1,11 @@
 {
-  "version": "v0.1.32",
-  "sequence": 1032,
+  "version": "v0.1.33",
+  "sequence": 1033,
   "cache": "https://agent-red.cachix.org",
   "storePaths": {
-    "aarch64-darwin": "/nix/store/whwq3k7llv8n27jx6w0clc2ppxhzxwzq-agent-red-extension-v0.1.32",
-    "aarch64-linux": "/nix/store/mdp27ii4j3j34sjrv05q1klnrkfzadvs-agent-red-extension-v0.1.32",
-    "x86_64-linux": "/nix/store/vy6jjn8rqyj7csfns9gisfrxcgildi6d-agent-red-extension-v0.1.32"
+    "aarch64-darwin": "/nix/store/v79fx6j0vk3acz6yd2vma9hf9i5r9rwf-agent-red-extension-v0.1.33",
+    "aarch64-linux": "/nix/store/44jays1pr2zv3z1sfkdwyqpcqkj5s0qq-agent-red-extension-v0.1.33",
+    "x86_64-linux": "/nix/store/kbsgbfzgiiiql0qmmkv3jp5mgkl8zim5-agent-red-extension-v0.1.33"
   },
   "toolkit": {
     "nixpkgsRev": "02c087f3fe673c9e317f206a627cb6b910336dbe",
@@ -325,7 +325,7 @@
       },
       {
         "command": "seclists",
-        "description": "Collection of multiple types of lists used during security assessments, collected in one place",
+        "description": "SecLists wordlist collection (a data set, not a command). Running `seclists` prints the directory of lists to reference by path, e.g. ffuf -w <dir>/Discovery/Web-Content/common.txt.",
         "keywords": [
           "wordlists",
           "fuzzing lists",
@@ -333,7 +333,8 @@
           "usernames",
           "passwords"
         ],
-        "nixAttr": "seclists"
+        "nixAttr": "seclists",
+        "path": "share/wordlists/seclists"
       },
       {
         "command": "bettercap",
