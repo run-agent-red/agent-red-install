@@ -1,11 +1,11 @@
 {
-  "version": "v0.1.49",
-  "sequence": 1049,
+  "version": "v0.1.50",
+  "sequence": 1050,
   "cache": "https://agent-red.cachix.org",
   "storePaths": {
-    "aarch64-darwin": "/nix/store/9xk2lprmbvmcqrm11q75k4d7ggbsnnqa-agent-red-extension-v0.1.49",
-    "aarch64-linux": "/nix/store/w3cxgy8cmkrcp3fdck7jwf5bagiv7iv1-agent-red-extension-v0.1.49",
-    "x86_64-linux": "/nix/store/fyyjzhy97aqpmgri6jjn6ck78fr4dgc2-agent-red-extension-v0.1.49"
+    "aarch64-darwin": "/nix/store/8261gaypgkby1d4c5wxzl6ijvw3v8xmm-agent-red-extension-v0.1.50",
+    "aarch64-linux": "/nix/store/rkczij9nixfk10phyn3zvkzs869rxjv7-agent-red-extension-v0.1.50",
+    "x86_64-linux": "/nix/store/jx6jca84kjqjdqk6n7g1gfcdin04nrvz-agent-red-extension-v0.1.50"
   },
   "toolkit": {
     "nixpkgsRev": "c56a87d8e41ce69bd2af57eb35dcc117a9dfca33",
@@ -322,6 +322,20 @@
           "introspection"
         ],
         "nixAttr": "clairvoyance"
+      },
+      {
+        "command": "mermaid-validate",
+        "description": "Parse a mermaid diagram and exit non-zero if it will not render; pinned to the console's mermaid version. Usage: mermaid-validate <file.mmd> (or pipe the source on stdin).",
+        "keywords": [
+          "mermaid",
+          "diagram",
+          "chart",
+          "validate",
+          "lint",
+          "render check",
+          "flowchart"
+        ],
+        "nixAttr": "mermaid-validate"
       },
       {
         "command": "seclists",
