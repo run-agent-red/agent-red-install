@@ -1,11 +1,11 @@
 {
-  "version": "v0.1.51",
-  "sequence": 1051,
+  "version": "v0.1.53",
+  "sequence": 1053,
   "cache": "https://agent-red.cachix.org",
   "storePaths": {
-    "aarch64-darwin": "/nix/store/jmjjij662wwa55jb326mzmzrnwx9s0xs-agent-red-extension-v0.1.51",
-    "aarch64-linux": "/nix/store/5lci7p1w8qvdlb64b5jnrmqai49k55jh-agent-red-extension-v0.1.51",
-    "x86_64-linux": "/nix/store/k2k9npxvcvvqawkavwz5lbzwndbjfxv5-agent-red-extension-v0.1.51"
+    "aarch64-darwin": "/nix/store/1zd1chdj383fjkwxpdwwjja7ya34g2yb-agent-red-extension-v0.1.53",
+    "aarch64-linux": "/nix/store/sc6a35wna6pc526y4285jj072xrv2xcx-agent-red-extension-v0.1.53",
+    "x86_64-linux": "/nix/store/qjbvq6864rdd8l9czx92av9bqrh11ygn-agent-red-extension-v0.1.53"
   },
   "toolkit": {
     "nixpkgsRev": "c56a87d8e41ce69bd2af57eb35dcc117a9dfca33",
